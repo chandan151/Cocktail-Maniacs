@@ -19,14 +19,54 @@ xhr.onload = function() {
     //console.log(harryPotterElixirs);
 
     printElixirs();
-    printIngredients();
-    printInventors();
+    //printIngredients();
+    //printInventors();
 }
 
 function printElixirs() {
     var elixir = document.getElementById("elixir");
     elixir.innerHTML = "The name of the elixir is " + harryPotterElixirs[index].name + " and the ingredients are " + harryPotterElixirs[index].ingredients[0].name + " and the price is " + harryPotterElixirs[index].price + " and the id is " + harryPotterElixirs[index].id;
 }
+
+//const myButton1 = document.getElementById("myButton1");
+const myButton2 = document.getElementById("myButton2");
+const myButton3 = document.getElementById("myButton3");
+const myButton4 = document.getElementById("myButton4");
+
+myButton2.addEventListener("click", function() {
+    if (showcase.style.display === "none") {
+      printIngredients();
+      showcase.style.display = "block";
+      galleryImgs.style.display = "none";
+      gallery.style.display = "none";
+    } else {
+      showcase.style.display = "none";
+      gallery.style.display = "none";
+      galleryImgs.style.display = "none";
+    }
+});
+
+myButton3.addEventListener("click", function() {
+    if (showcase.style.display === "none") {
+      printInventors();
+      showcase.style.display = "block";
+      gallery.style.display = "block";
+      galleryImgs.style.display = "none";
+    } else {
+      showcase.style.display = "none";
+      gallery.style.display = "none";
+      galleryImgs.style.display = "none";
+    }
+});
+
+myButton4.addEventListener("click", function() {
+    if (galleryImgs.style.display === "none") {
+        galleryImgs.style.display = "block";
+    } else {
+        galleryImgs.style.display = "none";
+    }
+});
+
 
 function printIngredients() {
 
@@ -41,7 +81,7 @@ function printIngredients() {
     text = removeDuplicates(text);
     //console.log(text);
 
-    var ingredients = document.getElementById("ingredients");
+    var ingredients = document.getElementById("showcase");
     ingredients.innerHTML = text;
 }
 
@@ -57,9 +97,10 @@ function printInventors() {
     text = removeDuplicates(text);
     //console.log(text);
 
-    var inventors = document.getElementById("inventors");
+    var inventors = document.getElementById("showcase");
     inventors.innerHTML = text;
 }
+
 
 function removeDuplicates(arr) {
     return [...new Set(arr)];
