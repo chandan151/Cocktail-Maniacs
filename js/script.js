@@ -1,12 +1,10 @@
-/* Javascript file*/
+/* Javascript file 1*/
 
 const xhr = new XMLHttpRequest();
 
 const baseurl = "https://wizard-world-api.herokuapp.com";
-const query1 = "/Houses";
-const query2 = "/Elixirs";
-const url = baseurl + query2;
-var harryPotterHouses;
+const query = "/Elixirs";
+const url = baseurl + query;
 var harryPotterElixirs;
 var index = 0;
 
@@ -18,14 +16,22 @@ xhr.onload = function() {
     harryPotterElixirs = JSON.parse(xhr.responseText);
     //console.log(harryPotterElixirs);
 
-    printElixirs();
+    //index = 55;
+    printElixir(index);
     //printIngredients();
     //printInventors();
 }
 
-function printElixirs() {
+function printElixir(index) {
+    var elixirName = document.getElementById("elixirName");
+    elixirName.innerHTML = harryPotterElixirs[index].name;
+
+    text = "";
+    for (let j = 0; j < harryPotterElixirs[index].ingredients.length; j++) {
+        text += harryPotterElixirs[index].ingredients[j].name + ",   ";
+    };
     var elixir = document.getElementById("elixir");
-    elixir.innerHTML = "The name of the elixir is " + harryPotterElixirs[index].name + " and the ingredients are " + harryPotterElixirs[index].ingredients[0].name + " and the price is " + harryPotterElixirs[index].price + " and the id is " + harryPotterElixirs[index].id;
+    elixir.innerHTML = "This Drink is made up of " + text + " The magical effect it has is that it " + harryPotterElixirs[index].effect + ", its characteristics are " + harryPotterElixirs[index].characteristics + " It is "+ harryPotterElixirs[index].difficulty +" in difficulty. Its side effects are " + harryPotterElixirs[index].sideEffects
 }
 
 //const myButton1 = document.getElementById("myButton1");

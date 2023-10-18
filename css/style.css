@@ -1,12 +1,44 @@
+body{
+    background-color: beige;
+    font-family: Arial, Helvetica   , sans-serif;
+    font-size: 1em;
+    margin: 0px;
+}
+
 #headings{
-    background-color: lightcyan;
+    background-color: black;
     font-size: 1em;
     font-weight: bold;
-    color: maroon;
+    color: white;
     text-align: center;
-    margin: 20px;
-    padding: 5px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 10px;
+}
+
+#tagline{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 3%;
+}
+
+#elixirDescription{
+    background-color: darkslategrey;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    color: white;
+}
+
+#elixirName{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 2%;
 }
 
 h3{
@@ -28,10 +60,7 @@ button{
     background-color: lightgray;
 }
 
-#galleryImgs{
-    max-width: 100%;
-}
-
-.item {
-    width: 25%;
+.imgs{
+    width: 32%;
+    height: 250px;  
 }
