@@ -17,12 +17,23 @@ body{
     margin-bottom: 10px;
 }
 
-#tagline{
+.tagline{
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2em;
     font-weight: bold;
     padding-top: 3%;
+}
+
+#logo{
+    width: 100%;
+    height: 100%;
+}
+
+td:first-child {
+  width: 15%;
+  margin: 0px;
+  padding-left: 4%;
 }
 
 #elixirDescription{
