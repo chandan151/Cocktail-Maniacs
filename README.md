@@ -4,6 +4,8 @@ A website that is menu of a cocktail restaurant.
 
 We make cocktails with ingredients that aren't seen elsewhere.
 
+My site URL: https://chandan151.github.io/Cocktail-Maniacs/
+
 documentations and details of API: https://wizard-world-api.herokuapp.com/swagger/index.html
 
 I used two APIs in my website.
