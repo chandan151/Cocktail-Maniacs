@@ -12,7 +12,7 @@ xhr.open("GET", url);
 xhr.send(null);
 
 xhr.onload = function() {
-    console.log("hurray, it worked!");
+    console.log("hurray, Elixirs are loaded");
     harryPotterElixirs = JSON.parse(xhr.responseText);
     //console.log(harryPotterElixirs);
 
@@ -128,5 +128,3 @@ function removeDuplicates(arr) {
 function getRandomNumber() {
     return Math.floor(Math.random() * 146);
 }
-
-// harry.innerHTML = "The name of house is " + harryPotterHouses[index].name + " and the founder is " + harryPotterHouses[index].founder + " and the head of house is " + harryPotterHouses[index].heads[1].firstName + " and the house ghost is " + harryPotterHouses[index].houseGhost + " and the house colors are " + harryPotterHouses[index].colors + " and the house mascot is " + harryPotterHouses[index].mascot + " and the house values are " + harryPotterHouses[index].values + " and the house members are " + harryPotterHouses[index].members + " and the house id is " + harryPotterHouses[index].id;

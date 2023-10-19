@@ -12,7 +12,7 @@ xhr1.open("GET", url1);
 xhr1.send(null);
 
 xhr1.onload = function() {
-    console.log("hurray, it worked!");
+    console.log("hurray, Houses are loaded");
     harryPotterHouses = JSON.parse(xhr1.responseText);
     console.log(harryPotterHouses);
 }
@@ -33,4 +33,8 @@ myButton1.addEventListener("click", function() {
 });
 
 function printHouses() {
+  var houses = document.getElementById("showcase");
+  //houses.innerHTML = (index+1) + "Name of the store is " + harryPotterHouses[index].name + ", that was founded by " + harryPotterHouses[index].founder + ""
+
+  houses.innerHTML = "The name of Store is " + harryPotterHouses[index].name + " and the founder is " + harryPotterHouses[index].founder + " and the head of Store is " + harryPotterHouses[index].heads[1].firstName + " and the store colors are " + harryPotterHouses[index].colors
 }
