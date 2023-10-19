@@ -15,3 +15,6 @@ I used two APIs in my website.
 2. https://wizard-world-api.herokuapp.com/Elixirs
 
 Description: I am using API to get data on Harry Potter books, specifically Elixirs and School Houses. then I intended to make a website that is kind of a business website for a cocktail restaurant. In the restaurant, all elixirs are represented as magical cocktails with their unique ingredients. after that, I used data from houses API to make a DOM that prints the location of the store and its details.
+
+
+citations: all the data is take from above mentioned api and images are taken from https://pngtree.com/ and https://www.pexels.com/ 
