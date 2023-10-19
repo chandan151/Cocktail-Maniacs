@@ -16,7 +16,7 @@ xhr.onload = function() {
     harryPotterElixirs = JSON.parse(xhr.responseText);
     //console.log(harryPotterElixirs);
 
-    //index = 55;
+    index = getRandomNumber();
     printElixir(index);
     //printIngredients();
     //printInventors();
@@ -30,14 +30,27 @@ function printElixir(index) {
     for (let j = 0; j < harryPotterElixirs[index].ingredients.length; j++) {
         text += harryPotterElixirs[index].ingredients[j].name + ",   ";
     };
+
+    if(text.length == 0) {
+        text = "unknown ingredients";
+    }
     var elixir = document.getElementById("elixir");
-    elixir.innerHTML = "This Drink is made up of " + text + " The magical effect it has is that it " + harryPotterElixirs[index].effect + ", its characteristics are " + harryPotterElixirs[index].characteristics + " It is "+ harryPotterElixirs[index].difficulty +" in difficulty. Its side effects are " + harryPotterElixirs[index].sideEffects
+    elixir.innerHTML = "This Cocktail is made up of " + text + " The magical effect it has is that it " + harryPotterElixirs[index].effect + ", its characteristics are " + harryPotterElixirs[index].characteristics + " and it is "+ harryPotterElixirs[index].difficulty +" in difficulty. Its side effects are " + harryPotterElixirs[index].sideEffects
 }
 
-//const myButton1 = document.getElementById("myButton1");
+const myButton = document.getElementById("myButton");
+
 const myButton2 = document.getElementById("myButton2");
 const myButton3 = document.getElementById("myButton3");
 const myButton4 = document.getElementById("myButton4");
+
+myButton.addEventListener("click", function() {
+    index = getRandomNumber();
+    printElixir(index);
+    showcase.style.display = "none";
+    gallery.style.display = "none";
+    galleryImgs.style.display = "none";
+});
 
 myButton2.addEventListener("click", function() {
     if (showcase.style.display === "none") {
@@ -110,7 +123,10 @@ function printInventors() {
 
 function removeDuplicates(arr) {
     return [...new Set(arr)];
-  }
+}
 
+function getRandomNumber() {
+    return Math.floor(Math.random() * 146);
+}
 
 // harry.innerHTML = "The name of house is " + harryPotterHouses[index].name + " and the founder is " + harryPotterHouses[index].founder + " and the head of house is " + harryPotterHouses[index].heads[1].firstName + " and the house ghost is " + harryPotterHouses[index].houseGhost + " and the house colors are " + harryPotterHouses[index].colors + " and the house mascot is " + harryPotterHouses[index].mascot + " and the house values are " + harryPotterHouses[index].values + " and the house members are " + harryPotterHouses[index].members + " and the house id is " + harryPotterHouses[index].id;
